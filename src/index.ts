@@ -12,7 +12,7 @@ import cors from 'cors'
 
 const app = express();
 
-const PORT = 8001;
+const PORT = 8000;
 
 app.use(cors())
 // adding body parser
@@ -27,6 +27,6 @@ app.use("/", register);
 app.use("/", studentDetails);
 app.use("/",qnaAdvise)
 
-app.listen(PORT, () => {
+app.listen(PORT,"0.0.0.0", () => {
   console.log(`Connected to PORT ${PORT}`);
 });
